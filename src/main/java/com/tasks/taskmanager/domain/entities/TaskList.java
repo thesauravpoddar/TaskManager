@@ -3,6 +3,8 @@ package com.tasks.taskmanager.domain.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Entity
@@ -21,12 +23,52 @@ public class TaskList {
     @Column(name = "description")
     private String description;
 
+    @OneToMany(mappedBy = "taskList" , cascade = {
+            CascadeType.REMOVE , CascadeType.PERSIST
+            })  // this represents one task list to many tasks inside this annotation
+    private List<Task> tasks;
+
     @Column(name = "created" , nullable = false)
     private LocalDateTime created;
 
     @Column(name = "updated" , nullable = false)
     private LocalDateTime updated;
 
+    public TaskList() {
+    }
+
+    public TaskList(UUID id, String title, String description, List<Task> tasks, LocalDateTime created, LocalDateTime updated) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.tasks = tasks;
+        this.created = created;
+        this.updated = updated;
+    }
+
+    public LocalDateTime getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(LocalDateTime updated) {
+        this.updated = updated;
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
+    }
 
     public String getDescription() {
         return description;
