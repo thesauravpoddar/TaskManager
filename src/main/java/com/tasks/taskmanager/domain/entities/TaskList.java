@@ -45,6 +45,13 @@ public class TaskList {
         this.created = created;
         this.updated = updated;
     }
+    public  UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public LocalDateTime getUpdated() {
         return updated;
@@ -86,13 +93,7 @@ public class TaskList {
         this.title = title;
     }
 
-    public UUID getId() {
-        return id;
-    }
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Override
     public boolean equals(Object o) {
