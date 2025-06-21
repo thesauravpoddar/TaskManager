@@ -6,10 +6,12 @@ import com.tasks.taskmanager.domain.dto.TaskListdto;
 import com.tasks.taskmanager.domain.entities.Task;
 import com.tasks.taskmanager.domain.entities.TaskList;
 import com.tasks.taskmanager.domain.entities.taskStatus;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class TaskListMapperimpl implements TaskListMapper {
 
     private final TaskMapper taskMapper;

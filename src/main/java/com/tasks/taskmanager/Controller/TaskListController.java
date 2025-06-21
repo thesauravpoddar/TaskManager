@@ -3,8 +3,6 @@ package com.tasks.taskmanager.Controller;
 import com.tasks.taskmanager.Mappers.TaskListMapper;
 import com.tasks.taskmanager.Services.TaskListService;
 import com.tasks.taskmanager.domain.dto.TaskListdto;
-import com.tasks.taskmanager.domain.entities.TaskList;
-import com.tasks.taskmanager.repostries.TaskListRepo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
