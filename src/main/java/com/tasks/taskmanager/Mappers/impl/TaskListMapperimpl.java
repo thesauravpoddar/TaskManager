@@ -2,7 +2,7 @@ package com.tasks.taskmanager.Mappers.impl;
 
 import com.tasks.taskmanager.Mappers.TaskListMapper;
 import com.tasks.taskmanager.Mappers.TaskMapper;
-import com.tasks.taskmanager.domain.dto.TaskListdto;
+import com.tasks.taskmanager.domain.dto.TaskListDto;
 import com.tasks.taskmanager.domain.entities.Task;
 import com.tasks.taskmanager.domain.entities.TaskList;
 import com.tasks.taskmanager.domain.entities.taskStatus;
@@ -22,7 +22,7 @@ public class TaskListMapperimpl implements TaskListMapper {
 
 
     @Override
-    public TaskList fromDto(TaskListdto taskListDto) {
+    public TaskList fromDto(TaskListDto taskListDto) {
         return new TaskList(
              taskListDto.id(),
              taskListDto.title(),
@@ -38,8 +38,8 @@ public class TaskListMapperimpl implements TaskListMapper {
     }
 
     @Override
-    public TaskListdto toDto(TaskList taskList) {
-        return new TaskListdto(
+    public TaskListDto toDto(TaskList taskList) {
+        return new TaskListDto(
                 taskList.getId(),
                 taskList.getTitle(),
                 taskList.getDescription(),
