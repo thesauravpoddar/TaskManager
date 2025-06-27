@@ -51,7 +51,7 @@ public class TaskListServiceimpl implements TaskListService {
     }
 
     @Override
-    public TaskList UpdateTaskList(UUID taskListId, TaskList taskList) {
+    public TaskList updateTaskList(UUID taskListId, TaskList taskList) {
         if(null == taskList.getId()) {
             throw new IllegalArgumentException("Task lIst must have an id");
         }
@@ -66,5 +66,10 @@ public class TaskListServiceimpl implements TaskListService {
         existingTaskList.setUpdated(LocalDateTime.now());
         return taskListRepo.save(existingTaskList);
 
+    }
+
+    @Override
+    public void deleteTaskList(UUID taskListId) {
+        taskListRepo.deleteById(taskListId);
     }
 }

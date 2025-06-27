@@ -10,10 +10,10 @@ import java.util.UUID;
 /// wec need so
 public record TaskDto(
         UUID id,
-        String title ,
-        String description ,
+        String title,
+        String description,
         LocalDateTime dueDate,
-        TaskPRIORITY priority ,
+        TaskPRIORITY priority,
         taskStatus status
 ) {
 
