@@ -6,10 +6,6 @@ WELCOME....:)
   Smart, clean & productive – A full-stack task management app with priorities, due dates, and progress tracking.
 </p>
 
-<p align="center">
-  <img src="https://your-domain.com/demo.gif" alt="Demo of Taskrido" width="700"/>
-</p>
-
 ---
 
 ## 📌 Overview
